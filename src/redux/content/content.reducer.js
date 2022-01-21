@@ -1,9 +1,6 @@
 import ContentActionTypes from './content.types';
 const INITIAL_STATE = {
-  content: [{
-    userId:1,
-    title:"title"
-  }],
+  data: null,
   isFetching: false,
   errorMessage: undefined
 };
@@ -17,12 +14,14 @@ const contentReducer = (state = INITIAL_STATE, action) => {
         isFetching: true
       };
     case ContentActionTypes.FETCH_CONTENT_SUCCESS:
+      console.log('success reducer')
       return {
         ...state,
         isFetching: false,
-        content: action.payload
+        data: action.payload
       };
     case ContentActionTypes.FETCH_CONTENT_FAILURE:
+      console.log('failure reducer')
       return {
         ...state,
         isFetching: false,

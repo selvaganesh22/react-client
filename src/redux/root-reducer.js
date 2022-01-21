@@ -7,7 +7,7 @@ import contentReducer from './content/content.reducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['content']
+  whitelist: ['demo']
 };
 
 const rootReducer = combineReducers({
