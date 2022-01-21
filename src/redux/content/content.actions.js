@@ -14,6 +14,7 @@ export const fetchContentFailure = errorMessage => ({
   type: ContentActionTypes.FETCH_CONTENT_FAILURE,
   payload: errorMessage
 });
+ 
 
 /*
 export const fetchContentStartAsync = () => {
