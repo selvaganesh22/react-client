@@ -15,7 +15,6 @@ export const fetchContentFailure = errorMessage => ({
   payload: errorMessage
 });
 
-
 /*
 export const fetchContentStartAsync = () => {
   return dispatch => {
