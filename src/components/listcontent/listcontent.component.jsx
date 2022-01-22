@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 
-import { fetchContentStartAsync } from '../../redux/content/content.actions'
+import { fetchContentStart } from '../../redux/content/content.actions'
 
 export const ListContent = () => {
     const listContent = useSelector((state) => state.content.data)
@@ -9,7 +9,7 @@ export const ListContent = () => {
 
     return (
         <div>
-            <button onClick={() => dispatch(fetchContentStartAsync())}>Fetch Content</button> <br />
+            <button onClick={() => dispatch(fetchContentStart())}>Fetch Content</button> <br />
             List Content Component<br />
             {
                 listContent && listContent.map((content) => {
@@ -19,9 +19,6 @@ export const ListContent = () => {
         </div>
     )
 };
-
-
-
 
 
 export default connect(

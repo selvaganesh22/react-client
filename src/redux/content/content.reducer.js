@@ -8,20 +8,17 @@ const INITIAL_STATE = {
 const contentReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ContentActionTypes.FETCH_CONTENT_START:
-      console.log('start reducer')
       return {
         ...state,
         isFetching: true
       };
     case ContentActionTypes.FETCH_CONTENT_SUCCESS:
-      console.log('success reducer')
       return {
         ...state,
         isFetching: false,
         data: action.payload
       };
     case ContentActionTypes.FETCH_CONTENT_FAILURE:
-      console.log('failure reducer')
       return {
         ...state,
         isFetching: false,

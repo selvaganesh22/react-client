@@ -16,6 +16,7 @@ export const fetchContentFailure = errorMessage => ({
 });
 
 
+/*
 
 export const fetchContentStartAsync = () => async dispatch => {
   try {
@@ -27,3 +28,4 @@ export const fetchContentStartAsync = () => async dispatch => {
   }
   
 };
+*/
